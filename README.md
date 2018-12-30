@@ -8,3 +8,8 @@ Create a TCP Server in Nodemcu module communicate with nodejs
 2.Create a nodejs server
 
 
+Resource
+`Documents` https://nodemcu.readthedocs.io
+`Lua uploader` link https://github.com/JeffCost/ESP8266_Lua_Uploader/blob/master/LuaUploader-Win.zip
+`Firmware board` lua support https://github.com/nodemcu/nodemcu-firmware/releases/download/0.9.5_20150318/nodemcu_float_0.9.5_20150318.bin
+`Hardware` Nodemcu -> Chip -> EPS8266
