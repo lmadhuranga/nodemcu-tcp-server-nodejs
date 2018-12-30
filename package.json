@@ -1,5 +1,5 @@
 {
-	"name": "Nodejs TCP Socket",
+	"name": "NodejsTCPSocket",
 	"description": "This applicaiton demotrate about the TCP server in NODEMCU and calling from nodejs client",
 	"version": "0.0.14",
 	"private": true,
@@ -18,8 +18,9 @@
 	},
 	"main": "./index.js",
 	"scripts": {
-		"start": "nodemon index.js",
-		"stop": "stop index.js"
+		"start": "nodemon client.js",
+		"client": "nodemon client.js",
+		"server": "nodemon server.js"
 	},
 	"bin": {
 		"test": "./index.js"

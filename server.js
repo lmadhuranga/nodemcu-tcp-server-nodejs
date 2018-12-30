@@ -1,16 +1,18 @@
-// Clinet code
+// Server
 const net = require('net');
-const host = '192.168.15.137';
-const port = 8000;
-const client = net.createConnection(port, host, () => {
-  // 'connect' listener
-  console.log('connected to server!');
-  client.write('hello from client!\r\n');
+const PORT = 8000;
+const server = net.createServer((socket) => {
+  // 'connection' listener
+  console.log('client connected');
+  socket.on('end', () => {
+    console.log('client disconnected');
+  });
+  socket.write('hello from nodejs TCP server\r\n');
+//   socket.pipe(c);
 });
-client.on('data', (data) => {
-  console.log(data.toString());
-  client.end();
+server.on('error', (err) => {
+  throw err;
 });
-client.on('end', () => {
-  console.log('disconnected from server');
+server.listen(PORT, () => {
+  console.log(`Server Up and runing in ${PORT}`);
 });
