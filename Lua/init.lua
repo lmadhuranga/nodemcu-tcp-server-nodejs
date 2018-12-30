@@ -1,6 +1,9 @@
 wifi.setmode(wifi.STATION)
+--  please update with your wifi credintial with here
 wifi.sta.config("mad-host", "madhost1")
-ledPin = 4
+
+local ledPin = 4
+local PORT = 8000
 gpio.mode(ledPin,gpio.OUTPUT)
 
 function receiver(sck, data)
@@ -9,13 +12,12 @@ function receiver(sck, data)
 end
 
 function socketCaller()
-    print("socker caller init")
     sv = net.createServer(net.TCP, 30)
     if sv then
-        print('server ok')
-        sv:listen(8000, function(conn)
+        print('Server up and flying')
+        sv:listen(PORT, function(conn)
           conn:on("receive", receiver)
-          conn:send("hello world")
+          conn:send("hello from server")
         end)
     end
 end
