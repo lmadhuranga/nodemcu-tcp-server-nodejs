@@ -1,0 +1,39 @@
+{
+	"name": "Nodejs TCP Socket",
+	"description": "Web control panel builder for Arduino",
+	"version": "0.0.14",
+	"private": true,
+	"preferGlobal": false,
+	"author": {
+		"name": "Bill Roy",
+		"email": "bill@bitlash.net"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/billroy/WebSocketClient.git"
+	},
+	"licenses": {
+		"type": "MIT",
+		"url": "https://raw.github.com/billroy/bitlash-commander/master/LICENSE"
+	},
+	"main": "./index.js",
+	"scripts": {
+		"start": "nodemon index.js",
+		"stop": "stop index.js"
+	},
+	"bin": {
+		"test": "./index.js"
+	},
+	"dependencies": {
+	},
+	"engines": {
+		"node": ">=0.8.22",
+		"npm": ">=1.1.0"
+	},
+	"keywords": [
+		"arduino",
+		"bitlash",
+		"control panel",
+		"web control"
+	]
+}
