@@ -1,6 +1,6 @@
 {
 	"name": "Nodejs TCP Socket",
-	"description": "Web control panel builder for Arduino",
+	"description": "This applicaiton demotrate about the TCP server in NODEMCU and calling from nodejs client",
 	"version": "0.0.14",
 	"private": true,
 	"preferGlobal": false,
